@@ -1,9 +1,0 @@
-G:/dev/portfolio/c++/golden_leaf_coin/build-win32/CMakeFiles/golden_leaf_coin.dir
-G:/dev/portfolio/c++/golden_leaf_coin/build-win32/CMakeFiles/PACKAGE.dir
-G:/dev/portfolio/c++/golden_leaf_coin/build-win32/CMakeFiles/INSTALL.dir
-G:/dev/portfolio/c++/golden_leaf_coin/build-win32/CMakeFiles/ALL_BUILD.dir
-G:/dev/portfolio/c++/golden_leaf_coin/build-win32/CMakeFiles/ZERO_CHECK.dir
-G:/dev/portfolio/c++/golden_leaf_coin/build-win32/externallibs/string_interpolation/CMakeFiles/string_interpolation.dir
-G:/dev/portfolio/c++/golden_leaf_coin/build-win32/externallibs/string_interpolation/CMakeFiles/PACKAGE.dir
-G:/dev/portfolio/c++/golden_leaf_coin/build-win32/externallibs/string_interpolation/CMakeFiles/INSTALL.dir
-G:/dev/portfolio/c++/golden_leaf_coin/build-win32/externallibs/string_interpolation/CMakeFiles/ALL_BUILD.dir
