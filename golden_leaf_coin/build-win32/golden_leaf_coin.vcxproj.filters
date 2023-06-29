@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\GLCVariables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\GLCApplicationConfiguration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\authentication\cli\GLCCLIAuthentification.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\cli\GLCCLIApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\cli\GLCCLICommands.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\cli\GLCCLIDecoration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\cli\GLCCLIInpput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\cli\GLCCLIVariables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\gui\GLCGUIApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\mainarguments\GLCApplicationMainArgumentsParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\mainarguments\GLCApplicationProgramArguments.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\glcstl\GLCBadInitializationException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\glcstl\GLCDateTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\glcstl\GLCDateTimeFormat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\glcstl\GLCDateTimeFormatTypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\glcstl\GLCException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\glcstl\GLCFormatException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\glcstl\GLCInternalException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\mine\configurator\GLCUserAction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\mine\csd\GLCCSD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\network\peer_to_peer\GLCNetworkPeerToPeerConfigurator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\network\peer_to_peer\GLCNetworkPeerToPeerConstants.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\authentication\GLCAuthentificationSecurity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\GLCVariables.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\GLCApplicable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\GLCApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\GLCApplicationConfiguration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\authentication\cli\GLCCLIAuthentification.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\cli\GLCCLIApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\cli\GLCCLICommands.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\cli\GLCCLIDecoration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\cli\GLCCLIInpput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\cli\GLCCLIVariables.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\gui\GLCGUIApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\mainarguments\GLCApplicationMainArgumentsParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\mainarguments\GLCApplicationProgramArguments.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\glcstl\GLCBadInitializationException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\glcstl\GLCDateTime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\glcstl\GLCDateTimeFormat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\glcstl\GLCDateTimeFormatTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\glcstl\GLCException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\glcstl\GLCFormatException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\glcstl\GLCInternalException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\mine\configurator\GLCUserAction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\mine\csd\GLCCSD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\network\peer_to_peer\GLCNetworkPeerToPeerConfigurator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\network\peer_to_peer\GLCNetworkPeerToPeerConstants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\front\application\authentication\GLCAuthentificationSecurity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\project\helper\GLCGenerativeMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\dev\portfolio\c++\golden_leaf_coin\src\program\repair\GCLRepairable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\dev\portfolio\c++\golden_leaf_coin\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{A4F4168F-81CD-3D03-A246-B7AA859244F5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F6D9037C-7C88-3A2E-8295-3CE7E2FBB722}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

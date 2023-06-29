@@ -1,0 +1,10 @@
+^G:\DEV\PORTFOLIO\C++\GOLDEN_LEAF_COIN\BUILD-WIN32\CMAKEFILES\840E7C781D7CF65A649BDD5DA99CC55D\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SG:/dev/portfolio/c++/golden_leaf_coin -BG:/dev/portfolio/c++/golden_leaf_coin/build-win32 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file G:/dev/portfolio/c++/golden_leaf_coin/build-win32/golden_leaf_coin.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

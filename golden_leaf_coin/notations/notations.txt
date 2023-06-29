@@ -1,0 +1,14 @@
+-------------------------
+я не можу в класі istr::StringInterpolation викидати вийнятки томущо цей клас сам буде використовуватися для викидання вийнятків, він буде вписаний в класи які
+викидають вийнятки, тому паттерн (std::basic_string<T> pattern) та аргументи паттерна (std::map<std::basic_string<T>, std::basic_string<T>> patternArguments)
+мають бути ініціалізованими коректно сразу. Перевірка на правельність створенних змінних патерна та аргументів паттерна буде, але це буде просто повідомлення 
+(warning message) і це не зупинить роботу програми і клас istr::StringInterpolation буде працювати але неправильно.
+
+++++++++++++++++++++++++++++++
+
+I cannot throw exceptions in the istr::StringInterpolation class because this class itself will be used to throw exceptions, it will be included in classes that
+throws exceptions, so pattern (std::basic_string<T> pattern) and pattern arguments (std::map<std::basic_string<T>, std::basic_string<T>> patternArguments)
+must be initialized correctly immediately. Validation of the created pattern variables and pattern arguments will be, but this will be just a message
+(warning message) and this will not stop the program and the istr::StringInterpolation class will work but incorrectly.
+
+-------------------------

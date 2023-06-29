@@ -1,0 +1,81 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "/media/andriy/30F44312F442D9AC/dev/portfolio/c++/golden_leaf_coin/externallibs/string_interpolation/lib/libstring_interpolation.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"install"
+		],
+		"files" : 
+		[
+			"externallibs/string_interpolation/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
+			}
+		]
+	},
+	"id" : "string_interpolation::@42108a3690abf16356e2",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"name" : "string_interpolation",
+	"nameOnDisk" : "libstring_interpolation.a",
+	"paths" : 
+	{
+		"build" : "externallibs/string_interpolation",
+		"source" : "externallibs/string_interpolation"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"path" : "externallibs/string_interpolation/include/string_interpolation.h",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

@@ -1,0 +1,65 @@
+#include <iostream>
+#include <unordered_set>
+#include <string>
+#include <boost/regex.hpp>
+
+class Command {
+public:
+    Command(const std::string& name, const std::string& description, const std::string& regexPattern)
+            : name(name), description(description), command_regex(regexPattern) {}
+
+    const std::string& getName() const {
+        return name;
+    }
+
+    const std::string& getDescription() const {
+        return description;
+    }
+
+    const std::string& getRegexPattern() const {
+        return command_regex;
+    }
+
+private:
+    std::string name;
+    std::string description;
+    boost::regex command_regex;
+
+    struct CommandHash {
+        std::size_t operator()(const Command& cmd) const {
+            return std::hash<std::string>{}(cmd.getName());
+        }
+    };
+
+    struct CommandEqual {
+        bool operator()(const Command& lhs, const Command& rhs) const {
+            return lhs.getName() == rhs.getName();
+        }
+    };
+};
+
+int main() {
+    std::unordered_set<Command, Command::CommandHash, Command::CommandEqual> commandSet;
+
+    // Example commands
+    Command cmd1("Command1", "This is command 1", "regex_pattern1");
+    commandSet.insert(cmd1);
+
+    Command cmd2("Command2", "This is command 2", "regex_pattern2");
+    commandSet.insert(cmd2);
+
+    // Attempt to insert a duplicate command
+    Command duplicateCmd("Command1", "Duplicate command", "regex_pattern3");
+    commandSet.insert(duplicateCmd);
+
+    // Iterate over the commands in the unordered set
+    for (const auto& cmd : commandSet) {
+        std::cout << "command: " << cmd.getName() << std::endl;
+        std::cout << "Description: " << cmd.getDescription() << std::endl;
+        std::cout << "command Regex: " << cmd.getRegexPattern() << std::endl;
+        std::cout << std::endl;
+    }
+
+    return 0;
+}
+

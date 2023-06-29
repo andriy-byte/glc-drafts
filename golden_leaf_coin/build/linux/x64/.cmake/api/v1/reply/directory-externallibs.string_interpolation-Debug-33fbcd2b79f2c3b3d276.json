@@ -1,0 +1,55 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"externallibs/string_interpolation/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"/media/andriy/30F44312F442D9AC/dev/portfolio/c++/golden_leaf_coin/externallibs/string_interpolation/lib/libstring_interpolation.a"
+			],
+			"targetId" : "string_interpolation::@42108a3690abf16356e2",
+			"targetIndex" : 1,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				"externallibs/string_interpolation/include/string_interpolation.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "externallibs/string_interpolation",
+		"source" : "externallibs/string_interpolation"
+	}
+}

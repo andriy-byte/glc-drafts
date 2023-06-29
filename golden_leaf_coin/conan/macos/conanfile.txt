@@ -1,0 +1,11 @@
+[requires]
+spdlog/1.10.0
+fmt/9.1.0
+boost/1.80.0
+cryptopp/8.7.0
+imgui/cci.20220621+1.88.docking
+
+[generators]
+cmake
+cmake_paths
+cmake_find_package

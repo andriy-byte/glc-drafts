@@ -1,0 +1,200 @@
+typedef GLCTemplateBasicString<char> TemplateString;
+typedef GLCTemplateBasicString<wchar_t> TemplateWstring;
+typedef GLCTemplateBasicString<char8_t> TemplateU8string;
+typedef GLCTemplateBasicString<char16_t> TemplateU16string;
+typedef GLCTemplateBasicString<char32_t> TemplateU32string;
+
+using TemplateString [[maybe_unused]] = GLCTemplateBasicString<char>;
+using TemplateWstring [[maybe_unused]] = GLCTemplateBasicString<wchar_t>;
+using TemplateU8string [[maybe_unused]] = GLCTemplateBasicString<char8_t>;
+using TemplateU16string [[maybe_unused]] = GLCTemplateBasicString<char16_t>;
+using TemplateU32string [[maybe_unused]] = GLCTemplateBasicString<char32_t>;
+
+
+
+#include "GLCTemplateBasicString.h"
+
+namespace istr {
+
+
+    template<CharTypes T>
+    std::basic_string<T> GLCTemplateBasicString<T>::defaultOpenDelimiter(
+            reinterpret_cast<T *>(const_cast<char *>("{{")));
+    template<CharTypes T>
+    std::basic_string<T> GLCTemplateBasicString<T>::defaultCloseDelimiter(
+            reinterpret_cast<T *>(const_cast<char *>("}}")));
+
+    template<CharTypes T>
+    std::basic_string<T> GLCTemplateBasicString<T>::prepareTemplate() {
+
+        try {
+            tryPrepareSubstitution();
+            std::basic_string<T> prepare = pattern;
+            for (const auto &[replaceable, replacement]: getPatternArguments()) {
+                size_t start_position = 0;
+                while (
+                        (start_position = prepare.find(replaceable, start_position)) !=
+                        std::basic_string<T, std::char_traits<T>, std::allocator<T>>::npos) {
+                    prepare.replace(start_position, replaceable.length(), replacement);
+                    start_position += replacement.length();
+                }
+            }
+            return prepare;
+
+        } catch (TemplateBasicStringException &templateBasicStringException) {
+            spdlog::warn(templateBasicStringException.what());
+        }
+
+
+    }
+
+    template<CharTypes T>
+    std::basic_string<T> GLCTemplateBasicString<T>::validateReplaceable(
+            const std::basic_string<T> &replaceable) {
+        if (replaceable.starts_with(openDelimiter) &&
+            replaceable.ends_with(closeDelimiter)) {
+            return replaceable;
+        }
+
+        return openDelimiter + replaceable + closeDelimiter;
+    }
+
+    template<CharTypes T>
+    const std::basic_string<T> &
+    GLCTemplateBasicString<T>::getDefaultOpenDelimiter() {
+        return defaultOpenDelimiter;
+    }
+
+    template<CharTypes T>
+    const std::basic_string<T> &
+    GLCTemplateBasicString<T>::getDefaultCloseDelimiter() {
+        return defaultCloseDelimiter;
+    }
+
+    template<CharTypes T>
+    const std::basic_string<T> &
+    GLCTemplateBasicString<T>::getOpenDelimiter() const {
+        return openDelimiter;
+    }
+
+    template<CharTypes T>
+    void GLCTemplateBasicString<T>::setOpenDelimiter(
+            const std::basic_string<T> &openDelimiter) {
+        this->openDelimiter = openDelimiter;
+    }
+
+    template<CharTypes T>
+    const std::basic_string<T> &
+    GLCTemplateBasicString<T>::getCloseDelimiter() const {
+        return closeDelimiter;
+    }
+
+    template<CharTypes T>
+    void GLCTemplateBasicString<T>::setCloseDelimiter(
+            const std::basic_string<T> &closeDelimiter) {
+        this->closeDelimiter = closeDelimiter;
+    }
+
+    template<CharTypes T>
+    const std::basic_string<T> &GLCTemplateBasicString<T>::getPattern() const {
+        return pattern;
+    }
+
+    template<CharTypes T>
+    void GLCTemplateBasicString<T>::setPattern(
+            const std::basic_string<T> &pattern) {
+        this->pattern = pattern;
+    }
+
+    template<CharTypes T>
+    const std::map<std::basic_string<T>, std::basic_string<T>> &
+    GLCTemplateBasicString<T>::getPatternArguments() const {
+        return patternArguments;
+    }
+
+    template<CharTypes T>
+    void GLCTemplateBasicString<T>::putPatternArguments(
+            const std::map<std::basic_string<T>, std::basic_string<T>>
+            &patternArguments_) {
+        for (const auto &[replaceable, replacement]: patternArguments_) {
+            putPatternArgument(replaceable, replacement);
+        }
+    }
+
+    template<CharTypes T>
+    GLCTemplateBasicString<T>::GLCTemplateBasicString(
+            const std::basic_string<T> &pattern,
+            const std::map<std::basic_string<T>, std::basic_string<T>>
+            &patternArguments)
+            : pattern(pattern) {
+        setOpenDelimiter(defaultOpenDelimiter);
+        setCloseDelimiter(defaultCloseDelimiter);
+        putPatternArguments(patternArguments);
+    }
+
+    template<CharTypes T>
+    GLCTemplateBasicString<T>::GLCTemplateBasicString(
+            const std::basic_string<T> &pattern,
+            const std::map<std::basic_string<T>, std::basic_string<T>>
+            &patternArguments,
+            const std::basic_string<T> &openDelimiter,
+            const std::basic_string<T> &closeDelimiter)
+            : pattern(pattern), openDelimiter(openDelimiter),
+              closeDelimiter(closeDelimiter) {
+        putPatternArguments(patternArguments);
+    }
+
+    template<CharTypes T>
+    const std::basic_string<T> &GLCTemplateBasicString<T>::getSubstituted() const {
+        return prepareSubstitution();
+    }
+
+    template<CharTypes T>
+    void GLCTemplateBasicString<T>::putPatternArgument(
+            const std::basic_string<T> &replaceable,
+            const std::basic_string<T> &replacement) {
+        if (!pattern.contains(validateReplaceable(replaceable))) {
+            this->patternArguments.emplace(validateReplaceable(replaceable),
+                                           replacement);
+        }
+    }
+
+    template<CharTypes T>
+    GLCTemplateBasicString<T>::GLCTemplateBasicString(
+            const std::basic_string<T> &pattern)
+            : pattern(pattern) {
+        setOpenDelimiter(defaultOpenDelimiter);
+        setCloseDelimiter(defaultCloseDelimiter);
+    }
+
+
+    template<CharTypes T>
+    void GLCTemplateBasicString<T>::tryPrepareSubstitution() const noexcept(false) {
+        if (patternArguments.empty()) {
+            throw TemplateBasicStringException("it is impossible to build a string template, there is no template");
+        }
+        if (mode != TemplateBasicStringMode::NO_TEMPLATE) {
+            for (const auto &[key, value]: patternArguments) {
+                if (!pattern.contains(key)) {
+                    throw TemplateBasicStringException("the string template's pattern \" " +
+                                                       static_cast<std::string>(pattern) +
+                                                       " \" does not contain a argument " +
+                                                       static_cast<std::string>(key) + ".");
+                }
+            }
+        }
+    }
+
+    template<CharTypes T>
+    GLCTemplateBasicString<T>::GLCTemplateBasicString(const std::basic_string<T> &pattern, TemplateBasicStringMode mode)
+            :pattern(pattern), mode(mode) {}
+
+    template<CharTypes T>
+    GLCTemplateBasicString<T> &GLCTemplateBasicString<T>::operator+=(const GLCTemplateBasicString<T> &templateBasicString) {
+        this->pattern += templateBasicString.pattern;
+        putPatternArguments(templateBasicString.patternArguments);
+        return *this;
+    }
+
+
+} // namespace istr
